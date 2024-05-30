@@ -15,7 +15,7 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 	text-align: center; /* Ensure text is centered */
 	text-decoration: none; /* Remove underline */
 	border-radius: 1px; /* Slightly rounded corners */
-	border: 2px solid transparent; /* Add border */
+	border: 1px solid transparent; /* Add border */
 	transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for hover effects */
 	margin: 0; /* Ensure no additional margin is added */
 	color: white; /* Ensure text color is white */
