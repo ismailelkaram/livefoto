@@ -9,13 +9,16 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 	display: flex; /* Use Flexbox for the button itself */
 	justify-content: center; /* Center align text horizontally */
 	align-items: center; /* Center align text vertically */
-	padding: 10px 20px; /* Adjust padding for size */
-	font-size: 16px; /* Adjust font size */
+	width: 600px; /* Fixed width for rectangular buttons */
+	height: 50px; /* Fixed height for rectangular buttons */
+	font-size: 14px; /* Adjust font size */
 	text-align: center; /* Ensure text is centered */
 	text-decoration: none; /* Remove underline */
-	border-radius: 5px; /* Rounded corners */
+	border-radius: 1px; /* Slightly rounded corners */
 	border: 2px solid transparent; /* Add border */
 	transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for hover effects */
+	margin: 0; /* Ensure no additional margin is added */
+	color: white; /* Ensure text color is white */
 }
 
 .hero-cta .button-primary {
