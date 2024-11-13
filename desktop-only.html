@@ -4,37 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Только для компьютеров</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>ЛАЙВФОТО</title>
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600" rel="stylesheet">
-    <link rel="stylesheet" href="dist/css/style.css">
-	<script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
- 
+    <style>
+        /* Global styles similar to the main page */
+        body {
+            font-family: 'IBM Plex Sans', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .container {
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        /* Hero buttons, same style as main page */
+        .button {
+            display: inline-block;
+            background-color: #008cba;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background-color: #005f6b;
+        }
+
+        /* Mobile only - Hide on desktop */
+        @media (min-width: 1024px) {
+            body {
+                display: block;
+                text-align: left;
+            }
+            .container {
+                max-width: 100%;
+                box-shadow: none;
+                background-color: transparent;
+            }
+            h1, p {
+                color: transparent;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header or Nav -->
-    <header>
-        <h1>Live Foto</h1>
-        <!-- Add navigation links if needed -->
-    </header>
-
-    <!-- Main Content Section -->
-    <main>
-        <section>
-            <h2>Этот сайт лучше просматривать на компьютере</h2>
-            <p>Пожалуйста, зайдите с браузера на компьютере для лучшего опыта.</p>
-            <!-- Include any images, logo, or branding as on the main page -->
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2024 Live Foto. Все права защищены.</p>
-    </footer>
+    <div class="container">
+        <h1>Этот сайт лучше просматривать на компьютере</h1>
+        <p>Пожалуйста, зайдите с браузера на компьютере для лучшего опыта.</p>
+        <a href="#" class="button">Вернуться на главную</a>
+    </div>
 </body>
 </html>
-
