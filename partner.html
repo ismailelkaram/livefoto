@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js" xmlns="http://www.w3.org/1999/html">
+<html lang="en" class="no-js">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,10 +11,9 @@
 	<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
 	<style>
-		/* Responsive styles for mobile screens */
+		/* Base styles */
 		body {
 			font-family: 'IBM Plex Sans', sans-serif;
-			line-height: 1.6;
 			margin: 0;
 			padding: 0;
 			color: #333;
@@ -26,89 +25,123 @@
 			margin: 0 auto;
 		}
 
+		/* Header */
+		.site-header {
+			padding: 20px 0;
+			background-color: #f4f4f4;
+		}
+
+		.header-logo-image {
+			width: 150px;
+			display: block;
+			margin: 0 auto;
+		}
+
+		/* Hero Section */
+		.hero {
+			text-align: center;
+			padding: 30px 0;
+			background-color: #fafafa;
+		}
+
 		.hero-title {
 			font-size: 1.8rem;
-			text-align: center;
+			margin-bottom: 20px;
 			color: #444;
 		}
 
 		.hero-paragraph {
 			font-size: 1rem;
-			text-align: center;
 			margin-bottom: 20px;
+			color: #555;
 		}
 
 		.hero-inner img {
 			width: 100%;
 			max-width: 200px;
 			margin: 20px auto;
-			display: block;
 		}
 
-		.hero-inner a.button {
-			display: block;
-			width: 100%;
-			max-width: 200px;
-			text-align: center;
-			margin: 0 auto;
+		.hero-inner .button {
+			display: inline-block;
 			padding: 10px 20px;
-			background: #007BFF;
-			color: #fff;
-			border-radius: 4px;
+			font-size: 1rem;
+			background-color: #007BFF;
+			color: white;
+			border-radius: 5px;
 			text-decoration: none;
-			font-size: 16px;
-			transition: background 0.3s ease;
+			transition: background-color 0.3s;
 		}
 
-		.hero-inner a.button:hover {
-			background: #0056b3;
+		.hero-inner .button:hover {
+			background-color: #0056b3;
+		}
+
+		/* Main content */
+		.control p {
+			font-size: 1rem;
+			line-height: 1.6;
+			text-align: left;
+		}
+
+		.control strong {
+			display: block;
+			margin-bottom: 10px;
+			font-size: 1.1rem;
+			color: #222;
+		}
+
+		/* CTA Section */
+		.cta {
+			padding: 30px 20px;
+			text-align: center;
+			background-color: #f4f4f4;
+			border-radius: 8px;
+		}
+
+		.cta .button {
+			display: inline-block;
+			padding: 10px 20px;
+			font-size: 1rem;
+			background-color: #007BFF;
+			color: white;
+			border-radius: 5px;
+			text-decoration: none;
+			transition: background-color 0.3s;
+		}
+
+		.cta .button:hover {
+			background-color: #0056b3;
+		}
+
+		/* Footer */
+		.site-footer {
+			background-color: #333;
+			color: white;
+			padding: 20px 0;
+			text-align: center;
 		}
 
 		.footer-links {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			gap: 10px;
-			padding: 10px 0;
-		}
-
-		.footer-links li {
+			margin: 10px 0;
+			padding: 0;
 			list-style: none;
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 10px;
 		}
 
 		.footer-links a {
 			color: #007BFF;
 			text-decoration: none;
-			font-size: 14px;
 		}
 
 		.footer-links a:hover {
 			text-decoration: underline;
 		}
 
-		.cta-inner {
-			padding: 20px;
-			text-align: center;
-			background: #f9f9f9;
-			border-radius: 8px;
-			box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-		}
-
-		.cta-inner a {
-			display: inline-block;
-			margin-top: 10px;
-			padding: 10px 20px;
-			background: #007BFF;
-			color: #fff;
-			text-decoration: none;
-			border-radius: 4px;
-			transition: background 0.3s;
-		}
-
-		.cta-inner a:hover {
-			background: #0056b3;
-		}
-
+		/* Mobile Adjustments */
 		@media (max-width: 768px) {
 			.hero-title {
 				font-size: 1.5rem;
@@ -118,12 +151,11 @@
 				font-size: 0.9rem;
 			}
 
-			.hero-inner a.button {
-				font-size: 14px;
-			}
-
-			.cta-inner {
-				padding: 15px;
+			.cta .button,
+			.hero-inner .button {
+				width: 90%;
+				padding: 12px 20px;
+				font-size: 1rem;
 			}
 
 			.footer-links {
@@ -133,11 +165,15 @@
 
 		@media (max-width: 480px) {
 			.hero-title {
-				font-size: 1.3rem;
+				font-size: 1.2rem;
 			}
 
 			.hero-paragraph {
-				font-size: 0.8rem;
+				font-size: 0.85rem;
+			}
+
+			.footer-links a {
+				font-size: 0.9rem;
 			}
 		}
 	</style>
@@ -146,15 +182,7 @@
 <div class="body-wrap">
 	<header class="site-header">
 		<div class="container">
-			<div class="site-header-inner">
-				<div class="brand header-brand">
-					<h1 class="m-0">
-						<a href="#">
-							<img class="header-logo-image" src="#" alt="ЛАЙВФОТО">
-						</a>
-					</h1>
-				</div>
-			</div>
+			<img class="header-logo-image" src="/dist/images/logolife.jpg" alt="ЛАЙВФОТО">
 		</div>
 	</header>
 
@@ -165,23 +193,44 @@
 					<h1 class="hero-title">Добро пожаловать в ЛАЙВФОТО</h1>
 					<img class="header-logo-image" src="/dist/images/logolife.jpg" alt="ЛАЙВФОТО">
 					<p class="hero-paragraph">Творческое объединение фотографов и дизайнеров со всей России!</p>
-					<a class="button button-primary" href="index.html">Главная</a>
+					<a class="button" href="index.html">Главная</a>
 				</div>
 			</div>
 		</section>
-			<section class="cta section">
+
+		<div class="m-8 control text-center">
+			<p>
+				<strong>ФОТОСЕРВИС ДЛЯ ВАС И ВАШИХ КЛИЕНТОВ.</strong><br><br>
+				Предлагаем Вам:<br>
+				1. Сотрудничество в сфере предоставления фото услуг гостям вашего заведения на правах аренды территории в вашем заведении.<br>
+				2. Начните свой бизнес под нашим брендом.<br><br>
+				Наша компания монетизирует развлекательный и туристический трафик при помощи фотографий. Мы накопили огромный опыт работы в аквапарках, детских развлекательных комплексах, открытых парках развлечений и ночных клубах и т.п.<br><br>
+				Мы умеем отрабатывать потребности непосредственно для каждой конкретной локации, используя индивидуальный подход к каждой компании. Следовательно, мы можем развиваться вместе и предпринимать общие действия для увеличения потока посетителей.<br><br>
+				<strong>НАШИ КЛЮЧЕВЫЕ ПРЕИМУЩЕСТВА:</strong><br>
+				* Инновационная система фотовидеофиксации.<br>
+				* Наша компания за высококачественный сервис.<br>
+				* Наша компания постоянно инвестирует в обновление технической инфраструктуры.<br><br>
+				<strong>ЧТО ПОЛУЧИТ КЛИЕНТ, ПРИДЯ К ВАМ:</strong><br>
+				* Качественные фото.<br>
+				* Широкий ассортимент продукции.<br>
+				* Экономию своего времени.
+			</p>
+		</div>
+
+		<section class="cta section">
 	<div class="container">
 		<div class="cta-inner section-inner">
 			<h3 class="section-title mt-0">Контакты:</h3>
 			<p>
 				<strong>Телефон:</strong> +7 (932) 115-99-41<br>
 				<strong>Telegram:</strong> 
-				<a class="button button-primary" href="https://t.me/Development_Director_Livefoto" target="_blank">@Development_Director_Livefoto</a><br>
+				<a class="button button-primary button-wide-mobile" href="https://t.me/Development_Director_Livefoto" target="_blank">@Development_Director_Livefoto</a><br>
 				<strong>Email:</strong> <a href="mailto:RazDir@live-foto.ru">RazDir@live-foto.ru</a>
 			</p>
 		</div>
 	</div>
 </section>
+
 	</main>
 
 	<footer class="site-footer">
@@ -190,8 +239,6 @@
 				<li><a href="index.html">Главная</a></li>
 				<li><a href="#history">История</a></li>
 				<li><a href="#team">Команда</a></li>
-				<li><a href="#">Для соискателей</a></li>
-				<li><a href="#">Для партнёров</a></li>
 			</ul>
 			<p>&copy; ООО "ЛАЙВФОТО" ИНН 2366003166</p>
 		</div>
@@ -201,3 +248,4 @@
 <script src="dist/js/main.min.js"></script>
 </body>
 </html>
+
