@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en" class="no-js" xmlns="http://www.w3.org/1999/html">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,180 +9,20 @@
 	<link rel="stylesheet" href="dist/css/style.css">
 	<script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
 	<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-
-	<style>
-		/* Base styles */
-		body {
-			font-family: 'IBM Plex Sans', sans-serif;
-			margin: 0;
-			padding: 0;
-			color: #333;
-		}
-
-		.container {
-			width: 90%;
-			max-width: 1200px;
-			margin: 0 auto;
-		}
-
-		/* Header */
-		.site-header {
-			padding: 20px 0;
-			background-color: #f4f4f4;
-		}
-
-		.header-logo-image {
-			width: 150px;
-			display: block;
-			margin: 0 auto;
-		}
-
-		/* Hero Section */
-		.hero {
-			text-align: center;
-			padding: 30px 0;
-			background-color: #fafafa;
-		}
-
-		.hero-title {
-			font-size: 1.8rem;
-			margin-bottom: 20px;
-			color: #444;
-		}
-
-		.hero-paragraph {
-			font-size: 1rem;
-			margin-bottom: 20px;
-			color: #555;
-		}
-
-		.hero-inner img {
-			width: 100%;
-			max-width: 200px;
-			margin: 20px auto;
-		}
-
-		.hero-inner .button {
-			display: inline-block;
-			padding: 10px 20px;
-			font-size: 1rem;
-			background-color: #007BFF;
-			color: white;
-			border-radius: 5px;
-			text-decoration: none;
-			transition: background-color 0.3s;
-		}
-
-		.hero-inner .button:hover {
-			background-color: #0056b3;
-		}
-
-		/* Main content */
-		.control p {
-			font-size: 1rem;
-			line-height: 1.6;
-			text-align: left;
-		}
-
-		.control strong {
-			display: block;
-			margin-bottom: 10px;
-			font-size: 1.1rem;
-			color: #222;
-		}
-
-		/* CTA Section */
-		.cta {
-			padding: 30px 20px;
-			text-align: center;
-			background-color: #f4f4f4;
-			border-radius: 8px;
-		}
-
-		.cta .button {
-			display: inline-block;
-			padding: 10px 20px;
-			font-size: 1rem;
-			background-color: #007BFF;
-			color: white;
-			border-radius: 5px;
-			text-decoration: none;
-			transition: background-color 0.3s;
-		}
-
-		.cta .button:hover {
-			background-color: #0056b3;
-		}
-
-		/* Footer */
-		.site-footer {
-			background-color: #333;
-			color: white;
-			padding: 20px 0;
-			text-align: center;
-		}
-
-		.footer-links {
-			margin: 10px 0;
-			padding: 0;
-			list-style: none;
-			display: flex;
-			justify-content: center;
-			flex-wrap: wrap;
-			gap: 10px;
-		}
-
-		.footer-links a {
-			color: #007BFF;
-			text-decoration: none;
-		}
-
-		.footer-links a:hover {
-			text-decoration: underline;
-		}
-
-		/* Mobile Adjustments */
-		@media (max-width: 768px) {
-			.hero-title {
-				font-size: 1.5rem;
-			}
-
-			.hero-paragraph {
-				font-size: 0.9rem;
-			}
-
-			.cta .button,
-			.hero-inner .button {
-				width: 90%;
-				padding: 12px 20px;
-				font-size: 1rem;
-			}
-
-			.footer-links {
-				gap: 5px;
-			}
-		}
-
-		@media (max-width: 480px) {
-			.hero-title {
-				font-size: 1.2rem;
-			}
-
-			.hero-paragraph {
-				font-size: 0.85rem;
-			}
-
-			.footer-links a {
-				font-size: 0.9rem;
-			}
-		}
-	</style>
 </head>
 <body class="is-boxed has-animations">
 <div class="body-wrap">
 	<header class="site-header">
 		<div class="container">
-			<img class="header-logo-image" src="/dist/images/logolife.jpg" alt="ЛАЙВФОТО">
+			<div class="site-header-inner">
+				<div class="brand header-brand">
+					<h1 class="m-0">
+						<a href="#">
+							<img class="header-logo-image" src="#" alt="">
+						</a>
+					</h1>
+				</div>
+			</div>
 		</div>
 	</header>
 
@@ -190,14 +30,33 @@
 		<section class="hero">
 			<div class="container">
 				<div class="hero-inner">
-					<h1 class="hero-title">Добро пожаловать в ЛАЙВФОТО</h1>
-					<img class="header-logo-image" src="/dist/images/logolife.jpg" alt="ЛАЙВФОТО">
-					<p class="hero-paragraph">Творческое объединение фотографов и дизайнеров со всей России!</p>
-					<a class="button" href="index.html">Главная</a>
+					<div class="hero-copy">
+						<h1 class="hero-title mt-0"></h1>
+						<img class="header-logo-image" src="/dist/images/logolife.jpg" alt="">
+						<p class="hero-paragraph"> творческое объединение фотографов и дизайнеров со всей России!</p>
+						<div class="hero-inner">
+							<a class="button button-primary" href="index.html">Главная</a>
+						</div>
+					</div>
+
+					<div class="hero-figure anime-element">
+						<svg class="placeholder" width="528" height="396" viewBox="0 0 528 396">
+							<rect width="528" height="396" style="fill:transparent;" />
+						</svg>
+						<div class="hero-figure-box hero-figure-box-01" data-rotation="45deg"></div>
+						<div class="hero-figure-box hero-figure-box-02" data-rotation="-45deg"></div>
+						<div class="hero-figure-box hero-figure-box-03" data-rotation="0deg"></div>
+						<div class="hero-figure-box hero-figure-box-04" data-rotation="-135deg"></div>
+						<div class="hero-figure-box hero-figure-box-05"></div>
+						<div class="hero-figure-box hero-figure-box-06"></div>
+						<div class="hero-figure-box hero-figure-box-07"></div>
+						<div class="hero-figure-box hero-figure-box-08" data-rotation="-22deg"></div>
+						<div class="hero-figure-box hero-figure-box-09" data-rotation="-52deg"></div>
+						<div class="hero-figure-box hero-figure-box-10" data-rotation="-50deg"></div>
+					</div>
 				</div>
 			</div>
 		</section>
-
 		<div class="m-8 control text-center">
 			<p>
 				<strong>ФОТОСЕРВИС ДЛЯ ВАС И ВАШИХ КЛИЕНТОВ.</strong><br><br>
@@ -216,7 +75,6 @@
 				* Экономию своего времени.
 			</p>
 		</div>
-
 		<section class="cta section">
 	<div class="container">
 		<div class="cta-inner section-inner">
@@ -235,17 +93,42 @@
 
 	<footer class="site-footer">
 		<div class="container">
-			<ul class="footer-links">
-				<li><a href="index.html">Главная</a></li>
-				<li><a href="#history">История</a></li>
-				<li><a href="#team">Команда</a></li>
-			</ul>
-			<p>&copy; ООО "ЛАЙВФОТО" ИНН 2366003166</p>
+			<div class="site-footer-inner">
+				<div class="brand footer-brand">
+					<a href="index.html">
+						<img class="header-logo-image" src="/dist/images/logolife.jpg" alt="Logo">
+					</a>
+				</div>
+				<ul class="footer-links list-reset">
+					<li>
+						<a href="index.html">Главная</a>
+					</li>
+					<li>
+						<a href="#history">История</a>
+					</li>
+					<li>
+						<a href="#team">Команда</a>
+					</li>
+					<li>
+						<a href="#">Для соискателей</a>
+					</li>
+					<li>
+						<a href="#">Для партнёров</a>
+					</li>
+				</ul>
+
+				<div class="footer-copyright">
+					&copy; ООО "ЛАЙВФОТО" ИНН 2366003166
+				</div>
+			</div>
 		</div>
 	</footer>
 </div>
+<div class="scroll-buttons">
+	<a class="scroll-button" href="javascript:void(0);" onclick="scrollToTop()">↑ Наверх</a>
+</div>
+
 <script src="dist/js/scripts.js"></script>
 <script src="dist/js/main.min.js"></script>
 </body>
 </html>
-
