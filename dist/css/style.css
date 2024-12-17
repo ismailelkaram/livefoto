@@ -68,9 +68,9 @@ html, body {
 /* Scroll Buttons */
 .scroll-buttons {
     position: fixed;
-    top: 85%;
+    top: 95%;
     right: 20px;
-    transform: translateY(-50%);
+    transform: translateY(-30%);
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -108,63 +108,6 @@ video, .video-container {
     object-fit: contain; /* Ensures video is fully visible without cuts */
 }
 
-/* Mobile Styles */
-@media (max-width: 768px) {
-    body {
-        font-size: 16px;
-        line-height: 1.5;
-    }
-
-    .container {
-        padding: 15px;
-    }
-
-    .hero-title {
-        font-size: 28px;
-        text-align: center;
-    }
-
-    .hero-paragraph {
-        font-size: 16px;
-        margin-top: 15px;
-        text-align: center;
-    }
-
-    .hero-inner {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .header-logo-image {
-        max-width: 100%;
-        height: auto;
-    }
-
-    /* Buttons Adjustments */
-    .button, .hero-cta .button {
-        width: 100%; /* Full width for buttons */
-        padding: 12px;
-        font-size: 16px; /* Slightly larger font for readability */
-        margin-bottom: 10px; /* Space between buttons */
-        text-align: center;
-    }
-
-    .footer-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-links li {
-        margin-bottom: 10px;
-    }
-
-    .cta-cta .button {
-        width: 100%;
-        margin: 10px 0;
-    }
-}
-
 /* Mobile-specific Enhancements */
 @media (max-width: 768px) {
     /* Hero Section */
@@ -187,12 +130,16 @@ video, .video-container {
 
     /* Buttons */
     .button, .hero-cta .button {
-        font-size: 1rem;
-        padding: 10px 15px;
-        margin: 10px auto;
-        display: block;
-        width: 80%; /* Slightly smaller buttons for small devices */
-        text-align: center;
+        display: flex; /* Flexbox ensures perfect centering */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        width: 80%; /* Slightly smaller width for small devices */
+        height: 50px; /* Maintain consistent height */
+        font-size: 1rem; /* Font size for mobile */
+        text-align: center; /* Align text center */
+        margin: 10px auto; /* Center the button horizontally */
+        padding: 0; /* Remove extra padding */
+        box-sizing: border-box; /* Padding stays inside dimensions */
     }
 
     /* General Text Blocks */
