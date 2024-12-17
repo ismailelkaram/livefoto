@@ -65,7 +65,7 @@ html, body {
 /* Styles for the scroll buttons */
 .scroll-buttons {
     position: fixed;
-    top: 80%;
+    top: 85%;
     right: 20px;
     transform: translateY(-50%);
     display: flex;
