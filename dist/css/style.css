@@ -164,6 +164,20 @@ video, .video-container {
     .container {
         padding: 0 15px;
     }
+    /* Videos - Mobile-Specific Styling */
+.video-container, iframe, video {
+    width: 100%; /* Make the video fit the width of the container */
+    max-width: 100%; /* Ensure it doesn't exceed the screen width */
+    height: auto; /* Maintain the aspect ratio */
+    margin: 0 auto; /* Center the video */
+    display: block; /* Ensure proper block-level layout */
+}
+
+/* Add padding or margin if needed */
+.video-container {
+    padding: 10px; /* Optional: Add space around the video */
+}
+
 }
 
 
