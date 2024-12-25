@@ -164,19 +164,24 @@ video, .video-container {
     .container {
         padding: 0 15px;
     }
-    /* Videos - Mobile-Specific Styling */
-.video-container, iframe, video {
-    width: 100%; /* Make the video fit the width of the container */
+/* Responsive Video Styles */
+.video-container {
+    position: relative;
+    width: 100%; /* Make the container take full width */
     max-width: 100%; /* Ensure it doesn't exceed the screen width */
-    height: auto; /* Maintain the aspect ratio */
-    margin: 0 auto; /* Center the video */
-    display: block; /* Ensure proper block-level layout */
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    height: 0;
+    overflow: hidden;
 }
 
-/* Add padding or margin if needed */
-.video-container {
-    padding: 10px; /* Optional: Add space around the video */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
 }
+
 
 }
 
